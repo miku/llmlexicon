@@ -2,6 +2,12 @@
 
 > Short notes on LLM and related technologies.
 
+## Benchmarks
+
+Used to evaluate the performance of a model in a specific task. Examples include:
+
+* LMsys chatbot arena
+
 
 ## BOND
 
@@ -26,6 +32,11 @@ See also:
 
 
 ## Distilliation
+
+
+## Elo Rating System
+
+Relative skill assessment. Used for example in the LMsys chatbot arena scoring.
 
 ## Encoder-Decoder Network
 
