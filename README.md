@@ -68,12 +68,34 @@ budgets:
 | Gemma 3 4B  | 4T           | https://arxiv.org/abs/2503.19786 |
 | Gemma 3 1B  | 2T           | https://arxiv.org/abs/2503.19786 |
 
+## Proximal policy optimization (PPO)
+
+
+## Reward model (RM)
+
+A reward model is a neural network trained to predict human preferences by
+outputting scalar reward scores for model responses. It essentially serves as a
+proxy for human judgment during the reinforcement learning phase.
+
 ## RLHF
 
 > Reinforcement learning from human feedback (RLHF) is a key driver of quality
 > and safety in state-of-the-art large language models.
 
+> For example, large language models can generate outputs that are untruthful,
+> toxic, or simply not helpful to the user. In other words, these models are
+> not aligned with their users.
 
+The pipeline:
+
+* Step 1: Train a base language model using standard supervised learning
+* Step 2: Collect human preference data by having humans compare pairs of model outputs
+* Step 3: Train a reward model to predict which outputs humans prefer
+* Step 4: Use the reward model to fine-tune the original model with reinforcement learning
+
+See also:
+
+* [Training language models to follow instructions with human feedback](https://arxiv.org/pdf/2203.02155)
 
 ## Quantization Aware Training (QAT)
 
@@ -89,7 +111,6 @@ exposed to quantization at training time.
 Examples:
 
 * [https://github.com/google/sentencepiece](https://github.com/google/sentencepiece)
-
 
 ## Training an LLM
 
